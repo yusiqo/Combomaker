@@ -111,7 +111,7 @@ def sdd(call):
             rndg=str("".join(random.choice(gmails)for i in range(1)))
             rndr1=int("".join(random.choice(rkm1)for i in range(1)))
             rndr=str("".join(random.choice(rkm)for i in range(rndr1)))
-            hesap=(rndi+rndg+":"+rndi+rndr)
+            hesap=(rndi+rndr+rndg+":"+rndi+rndr)
             open("Zet-Kombo.txt","a").write(hesap+"\n")
             
         bot.send_document(call.message.chat.id,open('Zet-Kombo.txt', 'rb'))
