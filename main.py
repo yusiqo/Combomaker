@@ -113,6 +113,7 @@ def sdd(call):
             rndr=str("".join(random.choice(rkm)for i in range(rndr1)))
             hesap=(rndi+rndg+":"+rndi+rndr)
             open("Zet-Kombo.txt","a").write(hesap+"\n")
-            bot.send_document(call.message.chat.id,open('Zet-Kombo.txt', 'rb'))
+            
+        bot.send_document(call.message.chat.id,open('Zet-Kombo.txt', 'rb'))
 if __name__ == '__main__':
 	bot.polling(none_stop=True)
