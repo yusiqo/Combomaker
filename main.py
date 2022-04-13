@@ -101,6 +101,18 @@ def sdd(call):
             else:
                 pass
     elif call.data=="F2":
-        bot.send_message(call.message.chat.id, f"Bu Özellik Şu Anlık Mevcut Değildir")
+        open("Zet-Kombo.txt","w").write("")
+        for i in range(500):
+            adl=("mehmet","ali","mehmet","ersoy","hesap","enes","baturay","anar","eli","mahmut","minecraft","onur","pala","serhat","harun","hasa ","abdullah","kenar","neşe","polat","eren","kenan","kaya","Emra","Elcan","ecrin","mehmet","murat","kayhan","ayhan","sevket","furkan","derya","burak","nihat","ayse","umut","revan","esra","tahir","tolga","eren","yusuf","deniz","berke","ilyas","cakir",)
+            gmails=("@gmail.com","@yahoo.com","@hotmail.com","@yandex.com")
+            rkm=("1234567890")
+            rkm1=("123")
+            rndi=str("".join(random.choice(adl)for i in range(1)))
+            rndg=str("".join(random.choice(gmails)for i in range(1)))
+            rndr1=int("".join(random.choice(rkm1)for i in range(1)))
+            rndr=str("".join(random.choice(rkm)for i in range(rndr1)))
+            hesap=(rndi+rndg+":"+rndi+rndr)
+            open("Zet-Kombo.txt","a").write(hesap+"\n")
+            bot.send_document(call.message.chat.id,open('Zet-Kombo.txt', 'rb'))
 if __name__ == '__main__':
-	bot.polling(none_stop=True)   
+	bot.polling(none_stop=True)
