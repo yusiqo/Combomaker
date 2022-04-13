@@ -101,7 +101,6 @@ def sdd(call):
             else:
                 pass
     elif call.data=="F2":
-    	pass
         bot.send_message(call.message.chat.id, f"Bu Özellik Şu Anlık Mevcut Değildir")
 if __name__ == '__main__':
 	bot.polling(none_stop=True)   
